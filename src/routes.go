@@ -2,6 +2,7 @@ package main
 
 import "net/http"
 
+// Route struct describes a route
 type Route struct {
 	Name        string
 	Method      string
@@ -9,6 +10,7 @@ type Route struct {
 	HandlerFunc http.HandlerFunc
 }
 
+// Routes contains some routes
 type Routes []Route
 
 var routes = Routes{
@@ -27,7 +29,7 @@ var routes = Routes{
 	Route{
 		"ListSubmissions",
 		"GET",
-		"/api-v1/submissions/{submissionId}",
+		"/api-v1/submissions/{submissionID}",
 		SubmissionShow,
 	},
 }
